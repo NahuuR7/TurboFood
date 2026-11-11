@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#080808">
+    <title>Turbo Food | Menú Digital</title>
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+
+    <header class="header">
+        <img src="assets/Logo turbo food.jpeg" alt="Turbo Food" class="logo">
+        <div class="header-text">
+            <h1>TURBO FOOD</h1>
+            <p>COMIDA A TODA VELOCIDAD</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="welcome">
+            <h2>¡Bienvenido!</h2>
+            <p>Elegí tus productos y realizá tu pedido.</p>
+        </section>
+
+        <nav class="categories">
+            <button class="category active" data-category="Todos">Todos</button>
+            <button class="category" data-category="Combos">Combos</button>
+            <button class="category" data-category="Hamburguesas">Hamburguesas</button>
+            <button class="category" data-category="Lomos">Lomos</button>
+            <button class="category" data-category="Papas">Papas</button>
+        </nav>
+
+        <section>
+            <h2 class="section-title">Nuestro menú</h2>
+            <div id="products-container" class="products-grid"></div>
+        </section>
+
+        <section class="cart-section">
+            <div class="cart-header">
+                <h2>Tu pedido</h2>
+                <span id="cart-count">0 productos</span>
+            </div>
+
+            <div id="cart-container">
+                <p class="empty-cart">Todavía no agregaste productos.</p>
+            </div>
+
+            <div class="cart-total">
+                <span>Total:</span>
+                <strong id="cart-total">$0</strong>
+            </div>
+            <div class="customer-data">
+                <label for="customer-name">Nombre para identificar tu pedido:</label>
+
+                <input
+                    type="text"
+                    id="customer-name"
+                    placeholder="Ingresá tu nombre"
+                    maxlength="60"
+                >
+                </div>
+
+            <button id="checkout-button" class="checkout-button" disabled>
+                CONFIRMAR MI PEDIDO
+            </button>
+            <button id="cancel-order-button" class="cancel-button">
+                Cancelar pedido
+            </button>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>TURBO FOOD © 2026</p>
+        <p>Gracias por elegirnos.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+</html>
